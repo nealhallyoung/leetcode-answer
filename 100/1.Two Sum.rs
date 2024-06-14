@@ -19,3 +19,17 @@ impl Solution {
         unreachable!()
     }
 }
+
+// 2
+impl Solution {
+    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        let mut hashtable=HashMap::new();
+        for (i,&v) in nums.iter().enumerate() {
+            if let Some(&j)=hashtable.get(&(target-v)){
+                return vec![i as i32,j as i32]
+            }
+            hashtable.insert(v,i);
+        }
+        unreachable!()
+    }
+}
