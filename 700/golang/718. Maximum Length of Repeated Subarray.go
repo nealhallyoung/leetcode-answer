@@ -40,7 +40,7 @@ func findLength(nums1 []int, nums2 []int) int {
 				dp[i][j] = dp[i-1][j-1] + 1
 
 			}
-			if dp[i][j] > 0 {
+			if dp[i][j] > res {
 				res = dp[i][j]
 			}
 		}
